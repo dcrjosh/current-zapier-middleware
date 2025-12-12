@@ -172,6 +172,11 @@ async function pollOpportunities() {
     response.data ||
     [];
 
+  console.log(
+  "Opportunities fetched:",
+  Array.isArray(opportunities) ? opportunities.length : 0
+);
+
   let newestTimestamp = since;
 
   for (const opp of opportunities) {
