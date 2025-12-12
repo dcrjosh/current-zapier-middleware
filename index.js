@@ -209,6 +209,7 @@ async function pollOpportunities() {
  */
 
 cron.schedule("* * * * *", async () => {
+  console.log("PollingCurrent RMS at", new Date().toISOString());
   try {
     await pollOpportunities();
   } catch (error) {
